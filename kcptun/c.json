@@ -1,0 +1,16 @@
+{
+  "localaddr": ":9001",
+  "remoteaddr": "127.0.0.1:19999",
+  "key": "as01141012",
+  "crypt": "none",
+  "mode": "fast2",
+  "mtu": 1350,
+  "sndwnd": 512,
+  "rcvwnd": 512,
+  "datashard": 10,
+  "parityshard": 3,
+  "dscp": 0,
+  "nocomp": false,
+  "quiet": false,
+  "tcp": false
+}

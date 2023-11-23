@@ -1,0 +1,17 @@
+{
+    "listen": ":19999",
+    "target": "127.0.0.1:9000",
+    "key": "as01141012",
+    "crypt": "none",
+    "mode": "fast",
+    "mtu": 1350,
+    "sndwnd": 512,
+    "rcvwnd": 512,
+    "datashard": 10,
+    "parityshard": 3,
+    "dscp": 0,
+    "nocomp": false,
+    "quiet": false,
+    "tcp": false,
+    "pprof": false
+  }
