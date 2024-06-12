@@ -1,0 +1,13 @@
+{
+  "ClientPort": 8888,
+  "Use": 0,
+  "Servers": [
+    {
+      "ProxyAddr": "proxy",
+      "ProxyPort": 80,
+      "UserName": "a",
+      "Password": "b"
+    }
+  ],
+  "Dev":false
+}

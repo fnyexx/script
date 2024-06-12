@@ -1,0 +1,11 @@
+{
+  "ServerPort": 180,
+  "RedirctAddr": "www.baidu.com:80",
+  "Users": [
+    {
+      "UserName": "a",
+      "Password": "b"
+    }
+  ],
+  "Dev":false
+}
