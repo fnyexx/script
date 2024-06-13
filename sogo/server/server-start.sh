@@ -1,0 +1,1 @@
+./sogo-server 2>/dev/null 2>&1 &
