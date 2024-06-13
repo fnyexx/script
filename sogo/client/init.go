@@ -15,7 +15,7 @@ var configFilePath string = utils.GetWorkDir() + "sogo.json" //绝对路径或�
 var localAddr string
 var proxyAddr string
 
-const fakeHost string = "qtgwuehaoisdhuaishdaisuhdasiuhlassjd.com"
+const fakeHost string = "a.189.cn"
 
 var authorization string
 
