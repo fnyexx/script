@@ -1,0 +1,12 @@
+tunnel: 5b220b39-26dd-4439-8bb5-e1d4827188800
+credentials-file: ./tunnel.json
+protocol: http2
+
+ingress:
+  - hostname: t2.oske.cn
+    service: http://localhost:59002
+
+
+    originRequest:
+      noTLSVerify: true
+  - service: http_status:404
