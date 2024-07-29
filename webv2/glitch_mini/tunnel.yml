@@ -1,0 +1,10 @@
+tunnel: 47d5840c-e837-437c-b203-c4a8be6c53a6
+credentials-file: /app/tunnel.json
+protocol: http2
+
+ingress:
+  - hostname: tun2.oske.cn
+    service: http://localhost:8080
+    originRequest:
+      noTLSVerify: true
+  - service: http_status:404
