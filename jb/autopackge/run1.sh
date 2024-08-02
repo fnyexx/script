@@ -1,8 +1,8 @@
 #!/bin/sh
 echo =================================
-echo  auto package run...
+echo  $(date +%F%n%T) auto package run...
 echo =================================
- 
+
 
 #项目名字
 APP_NAME=service-
@@ -19,16 +19,16 @@ else
 fi
 
 
- 
+
 echo pull git start...
 cd /opt/aicr-admin
 git checkout develop
 git pull
 echo pull git end...
- 
+
 echo package start...
 output=`mvn clean package -Dmaven.test.skip=true`
- 
+
 echo stoping...
 #根据APP_NAME变量杀进程
 
@@ -41,12 +41,12 @@ echo copy package...
 
 cp -u /opt/aicr-admin/service-backend-app/target/service-backend-app.jar ./
 cp -u /opt/aicr-admin/service-backend-admin/target/service-backend-admin.jar ./
-#cp -u /opt/aicr-admin/service-gateway/target/service-gateway.jar ./
-#cp -u /opt/aicr-admin/service-i18n/target/service-i18n.jar ./
-#cp -u /opt/aicr-admin/service-jobs/target/service-jobs.jar ./
-#cp -u /opt/aicr-admin/service-oss/target/service-oss.jar ./
-#cp -u /opt/aicr-admin/service-quote-dc/target/service-quote-dc.jar ./
- 
+cp -u /opt/aicr-admin/service-gateway/target/service-gateway.jar ./
+cp -u /opt/aicr-admin/service-i18n/target/service-i18n.jar ./
+cp -u /opt/aicr-admin/service-jobs/target/service-jobs.jar ./
+cp -u /opt/aicr-admin/service-oss/target/service-oss.jar ./
+cp -u /opt/aicr-admin/service-quote-dc/target/service-quote-dc.jar ./
+
 echo Start Server...
 
 
@@ -58,4 +58,4 @@ nohup java -Xms512m -Xmx512m -jar service-jobs.jar --spring.profiles.active=prod
 nohup java -Xms512m -Xmx512m -jar service-oss.jar --spring.profiles.active=prod --spring.cloud.nacos.discovery.username=aicr_prod --spring.cloud.nacos.discovery.password=aicr_prod > /home/aig/java_app/logs/service-oss.log 2>&1 &
 nohup java -Xms512m -Xmx512m -jar service-quote-dc.jar --spring.profiles.active=prod --spring.cloud.nacos.discovery.username=aicr_prod --spring.cloud.nacos.discovery.password=aicr_prod > /home/aig/java_app/logs/service-quote-dc.log 2>&1 &
 
-echo Start End!
+echo $(date +%F%n%T) "- Start End!"
